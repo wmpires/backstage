@@ -6,9 +6,9 @@ metadata:
   name: William
 spec:
   profile:
-      displayName: William Pires
-      email: william.pires@belfius.be
-      picture: https://xsgames.co/randomusers/assets/avatars/male/0.jpg
+    displayName: William Pires
+    email: william.pires@belfius.be
+    picture: https://xsgames.co/randomusers/assets/avatars/male/0.jpg
   memberOf: [guests]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
