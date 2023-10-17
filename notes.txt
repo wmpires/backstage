@@ -1,0 +1,4 @@
+Backstage by Spotify
+- Remove create component from default page: https://backstage.io/docs/features/software-templates/#disable-register-existing-component-button
+- Flexibility : you can create whatever type of plugin using nodejs and react typescript
+- 

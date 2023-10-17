@@ -3,8 +3,36 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: guest
+  name: William
 spec:
+  profile:
+      displayName: William Pires
+      email: william.pires@belfius.be
+      picture: https://xsgames.co/randomusers/assets/avatars/male/0.jpg
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Kevin
+spec:
+  profile:
+    displayName: Kevin Beaulieu
+    email: kevin.beaulieu@belfius.be
+    picture: https://xsgames.co/randomusers/assets/avatars/male/3.jpg
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Clovis
+spec:
+  profile:
+    displayName: Isimbi Tiwange
+    email: Isimbi.Tiwange@belfius.be
+    picture: https://xsgames.co/randomusers/assets/avatars/female/1.jpg
   memberOf: [guests]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
