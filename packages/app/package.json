@@ -4,7 +4,13 @@
   "private": true,
   "bundled": true,
   "backstage": {
-    "role": "frontend"
+    "role": "frontend",
+    "templates": [
+      {
+        "id": "generate-spring-boot-app",
+        "url": "./plugins/templates/generate-spring-boot-app.yaml"
+      }
+    ]
   },
   "scripts": {
     "start": "backstage-cli package start",

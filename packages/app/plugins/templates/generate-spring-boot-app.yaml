@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: generate-spring-boot-app
+  title: Generate Spring Boot App
+  description: Generates a Spring Boot application using the provided source code.
+  tags:
+    - springboot
+    - api
+    - mvc
+spec:
+  owner: default/guest
+  type: repo-creator
+  steps:
+    - id: clone-repository
+      name: Clone Repository
+      action: github.pullRequest
+      input:
+        url: https://github.com/wmpires/backstage-templates.git
+        targetDirectory: "."
+
+    - id: create-repository
+      name: Create Repository
+      action: github.createRepo
+      input:
+        name: copy2
+        private: false
+        autoInit: true
+        description: "A copy of the Spring Boot app template"
+        defaultBranch: main
+        licenseTemplate: mit
+        readmeTemplate: default
+        gitignoreTemplate: default
+
+    - id: push-code
+      name: Push Code
+      action: github.push
+      input:
+        directory: "."
+        branch: main

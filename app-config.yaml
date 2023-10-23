@@ -30,10 +30,7 @@ auth:
   providers: {}
 
 integrations:
-  github:
-    - host: github.com
-      token: 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
-
+  # Moved to app-config.development.yaml
 
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
@@ -55,27 +52,7 @@ techdocs:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 scaffolder:
-  # see https://backstage.io/docs/features/software-templates/configuration for software template options
+  # https://backstage.io/docs/features/software-templates/configuration
 
 catalog:
-  import:
-    entityFilename: catalog-info.yaml
-    pullRequestBranchName: backstage-integration
-  rules:
-    - allow: [Component, System, API, Resource, Location]
-  locations:
-    # Local example data, file locations are relative to the backend process, typically `packages/backend`
-    - type: file
-      target: ../../examples/template/org.yaml
-
-    # Local example template
-    - type: file
-      target: ../../examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
-    # Local example organizational data
-    - type: file
-      target: ../../examples/org.yaml
-      rules:
-        - allow: [User, Group]
+  # https://backstage.io/docs/features/software-catalog/

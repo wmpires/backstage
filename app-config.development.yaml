@@ -1,11 +1,19 @@
 app:
   title: Backstage App by Spotify (Development)
 
-auth:
-  # see https://backstage.io/docs/auth/ to learn about auth providers
-  environment: development
-  providers:
-    github:
-      development:
-        clientId: ffaeda67b29f27cead6a
-        clientSecret: bd226d696e2453d992e1488d6eb52bda7178213f
+integrations:
+  # GitHub App Token to Auth
+  github:
+    - host: github.com
+      token: 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
+
+scaffolder:
+  # Override defaults
+  defaultAuthor:
+    name: Scaffolder
+    email: scaffolder@backstage.io
+  defaultCommitMessage: 'Initial commit'
+
+catalog:
+  rules:
+    - allow: [Component, Group, User, Resource, Location, Template, Domain, System]
